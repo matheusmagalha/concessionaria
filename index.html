@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Concessionária de Motos - Acesso</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Concessionária M3</h1>
+        <p>Acesse ou Cadastre-se</p>
+
+        <div class="form-wrapper">
+
+            <form id="login-form" class="active">
+                <h2>Entrar</h2>
+                <input type="email" placeholder="E-mail" required>
+                <input type="password" placeholder="Senha" required>
+                <button type="submit">Acessar</button>
+                
+                <p class="link-opcao" onclick="mostrarFormulario('esqueci')">Esqueci minha senha</p>
+                <p class="link-opcao" onclick="mostrarFormulario('cadastro')">Não tem conta? Cadastre-se</p>
+            </form>
+
+            <form id="cadastro-form">
+                <h2>Cadastro</h2>
+                <input type="text" placeholder="Nome Completo" required>
+                <input type="email" placeholder="E-mail" required>
+                <input type="password" placeholder="Nova Senha" required>
+                <input type="password" placeholder="Confirme a Senha" required>
+                <button type="submit">Cadastrar</button>
+
+                <p class="link-opcao" onclick="mostrarFormulario('login')">Já tem conta? Entrar</p>
+            </form>
+
+            <form id="esqueci-form">
+                <h2>Recuperar Senha</h2>
+                <p>Informe seu e-mail para receber as instruções de recuperação.</p>
+                <input type="email" placeholder="E-mail" required>
+                <button type="submit">Enviar</button>
+
+                <p class="link-opcao" onclick="mostrarFormulario('login')">Voltar para o Login</p>
+            </form>
+
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

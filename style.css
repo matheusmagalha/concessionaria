@@ -1,0 +1,94 @@
+/* Estilos globais/reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    background-color: #f0f0f0; /* Cor de fundo suave */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Container principal */
+.container {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+}
+
+h1 {
+    color: #cc0000; /* Vermelho/principal da concessionária */
+    margin-bottom: 5px;
+}
+
+p {
+    color: #666;
+    margin-bottom: 20px;
+}
+
+/* Esconder todos os formulários por padrão */
+.form-wrapper form {
+    display: none;
+    transition: opacity 0.3s ease;
+    padding: 10px 0;
+}
+
+/* Mostrar apenas o formulário com a classe 'active' */
+.form-wrapper form.active {
+    display: block;
+    animation: fadeIn 0.5s;
+}
+
+/* Animação de fade-in */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Estilos de input e botão */
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #cc0000;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #a30000;
+}
+
+/* Estilo para os links de troca de formulário */
+.link-opcao {
+    margin-top: 15px;
+    color: #007bff;
+    cursor: pointer;
+    text-decoration: underline;
+    font-size: 14px;
+}
+.link-opcao:hover {
+    color: #0056b3;
+}
